@@ -1,0 +1,19 @@
+{
+  "name": "wcnexus-venture-theme",
+  "version": "0.1.0",
+  "description": "Venture page theme for wcnexus.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valorad/wcnexus-venture-theme.git"
+  },
+  "author": "Valorad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valorad/wcnexus-venture-theme/issues"
+  },
+  "homepage": "https://github.com/valorad/wcnexus-venture-theme#readme"
+}
