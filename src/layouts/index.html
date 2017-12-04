@@ -9,6 +9,28 @@
 <body class="mat-green-yellow">
 
   {{ partial "header.html" . }}
+  <section class="cover parallax-window">
+    <!-- cover pic -->
+    <div class="imgHolder parallax" data-parallax data-src="{{ "images/landscape.jpg" | absURL }}">
+      <!-- <img src="{{ "images/landscape.jpg" | absURL }}" alt="cover" class="fluid"> -->
+    </div>
+    <div class="venturer">
+      <div class="avatar">
+        <p class="avatar">
+          <img src="{{ "images/fallout-VaultBoy-2.jpg" | absURL }}" alt="avatar" class="fluid round">
+        </p>
+        <p>Valorad</p>
+      </div>
+      <div class="social">
+        <ul>
+          <li><img src="{{ "images/weibo.png" | absURL }}" alt="weibo" class="fluid"></li>
+          <li><img src="{{ "images/zhihu.png" | absURL }}" alt="zhihu" class="fluid"></li>
+          <li><img src="{{ "images/twitter.png" | absURL }}" alt="twitter" class="fluid"></li>
+          <li><img src="{{ "images/github-social.png" | absURL }}" alt="github-social" class="fluid"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <section>
     {{ range $section }}
       <div>

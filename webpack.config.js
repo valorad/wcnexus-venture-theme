@@ -6,11 +6,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    main: './src/main.js',
+    vendor: './src/vendor.js'
+  },
 
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "static/js/bundle.js"
+    filename: "static/js/[name].js"
   },
 
   module: {
@@ -39,11 +42,11 @@ module.exports = {
   },
 
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   $: 'jquery',
-    //   jQuery: 'jquery',
-    //   'window.jQuery': 'jquery'
-    // }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
     new CleanWebpackPlugin(['dist']),
     // new HtmlWebpackPlugin({
     //   filename: 'index.html',
