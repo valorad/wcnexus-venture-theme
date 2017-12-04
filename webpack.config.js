@@ -88,12 +88,12 @@ module.exports = {
 
     new ExtractTextPlugin('./static/css/[name].css'),
 
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   sourceMap: true,
+    //   compress: {
+    //     warnings: false
+    //   }
+    // })
 
     
   ]

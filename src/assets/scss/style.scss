@@ -1,3 +1,5 @@
+@import '~materialize-css/sass/materialize.scss';
+
 body {
   margin: 0px;
   padding: 0px;
@@ -19,35 +21,8 @@ body {
   max-width: 100%;
 }
 
-.matButton {
-  color: currentColor;
-  box-sizing: border-box;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  outline: 0;
-  border: none;
-  -webkit-tap-highlight-color: transparent;
-  display: inline-block;
-  white-space: nowrap;
-  text-decoration: none;
-  vertical-align: baseline;
-  text-align: center;
-  margin: 0;
-  min-width: 88px;
-  line-height: 36px;
-  padding: 0 16px;
-  border-radius: 2px;
-  background: transparent;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.matButton:hover {
-  background: rgba(0, 0, 0, 0.4);
+.btn-flat:hover {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* Header */
@@ -72,10 +47,14 @@ nav.navTop {
   }
 }
 
-// .mat-green .primary {
-//   background: #4caf50;
-//   color: hsla(0,0%,100%,.87);
-// }
+.mat-green-yellow {
+  .primary {
+    @extend .green;
+  }
+  .accent {
+    @extend .yellow;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   nav.navTop {

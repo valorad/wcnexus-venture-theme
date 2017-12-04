@@ -1,8 +1,5 @@
-import 'materialize-css/dist/js/materialize.min';
+import 'materialize-css/dist/js/materialize';
 
 // styles
 
-import 'materialize-css/sass/materialize.scss';
-
-// user style
 import './assets/scss/style.scss';
