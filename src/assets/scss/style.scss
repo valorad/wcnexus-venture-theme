@@ -1,5 +1,19 @@
 @import '~materialize-css/sass/materialize.scss';
 
+// materialize custom patch
+.mat-green-yellow {
+  .primary {
+    @extend .green;
+  }
+  .accent {
+    @extend .yellow;
+  }
+}
+
+.btn-flat:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -21,10 +35,6 @@ body {
   max-width: 100%;
 }
 
-.btn-flat:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
 /* Header */
 nav.navTop {
   display: -webkit-box;
@@ -35,6 +45,9 @@ nav.navTop {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  .btn-flat {
+    color: hsla(0,0%,100%,.87);
+  }
   // padding: 8px 16px;
   a.holder {
     display: flex;
@@ -47,14 +60,7 @@ nav.navTop {
   }
 }
 
-.mat-green-yellow {
-  .primary {
-    @extend .green;
-  }
-  .accent {
-    @extend .yellow;
-  }
-}
+
 
 @media only screen and (min-width: 992px) {
   nav.navTop {
