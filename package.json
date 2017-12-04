@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/valorad/wcnexus-venture-theme#readme",
   "dependencies": {
-    "hammerjs": "^2.0.8",
-    "jquery": "^3.2.1",
-    "materialize-css": "https://github.com/Dogfalo/materialize.git"
+    "materialize-css": "^1.0.0-alpha.2"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
