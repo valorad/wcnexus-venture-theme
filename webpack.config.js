@@ -1,7 +1,6 @@
 const path = require('path');
 
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -21,7 +20,18 @@ module.exports = {
         use: ExtractTextPlugin.extract(
           {
             fallback: 'style-loader',
-            use: ['css-loader?sourceMap', "sass-loader"]
+            use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  minimize: true,
+                  sourceMap: true
+                }
+              },
+              {
+                loader: 'sass-loader'
+              }
+            ]
           }
         )
       }

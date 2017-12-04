@@ -60,21 +60,27 @@ nav.navTop {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 16px;
+  // padding: 8px 16px;
+  a.holder {
+    display: flex;
+  }
+  .logo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5em;
+  }
 }
 
-nav.navTop a.holder {
-  display: flex;
-}
+// .mat-green .primary {
+//   background: #4caf50;
+//   color: hsla(0,0%,100%,.87);
+// }
 
-nav.navTop .logo {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin-right: 0.5em;
-}
-
-.mat-green .primary {
-  background: #4caf50;
-  color: hsla(0,0%,100%,.87);
+@media only screen and (min-width: 992px) {
+  nav.navTop {
+    a.brand-logo {
+      position: static;
+    }
+  }
 }
