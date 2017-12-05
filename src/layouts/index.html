@@ -35,24 +35,26 @@
         <h2>This dude was too confused to make a bio.</h2>
       </header>
       <section>
-        {{ range $section }}
-          <div class="row">
-            <div class="col m12 l5">
-              <div class="card">
-                <div class="card-image">
+        <div class="row">
+          {{ range $section }}
+          <div class="col m12 l5">
+            <article class="card">
+              <div class="card-image">
+                <a href="{{ .Permalink }}">
                   <img src="{{ "images/defaultPost.png" | absURL }}">
                   <span class="card-title">{{ .Title }}</span>
-                </div>
-                <div class="card-content">
-                  <p>{{ .Summary }}</p>
-                </div>
-                <div class="card-action">
-                  <a href="{{ .Permalink }}">Read more</a>
-                </div>
+                </a>
               </div>
-            </div>
+              <div class="card-content">
+                <p>{{ .Summary }}</p>
+              </div>
+              <div class="card-action">
+                <a href="{{ .Permalink }}">Read more</a>
+              </div>
+            </article>
           </div>
-        {{ end }}
+          {{ end }}
+        </div>
       </section>
     </div>
 
