@@ -2,11 +2,26 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
 {{ partial "head.html" . }}
 <body class="mat-green-yellow">
+
   {{ partial "header.html" . }}
-    
-  <h1> {{ .Title }} </h1>
-  <p> {{ .Content }} </p>
-    
+  <section class="cover single">
+    <div class="parallax" data-parallax data-src="{{ "images/defaultPost.png" | absURL }}"></div>
+
+    <!-- <div>
+      <h1>  </h1>
+    </div> -->
+  </section>
+
+  <main class="single">
+    <div class="content">
+      <article class="card">
+        <div class="card-content">
+          <span class="card-title">{{ .Title }}</span>
+          {{ .Content }}
+        </div>
+      </article>
+    </div>
+  </main>
   {{ partial "footer.html" . }}
   {{ partial "body-script.html" . }}
 </body>

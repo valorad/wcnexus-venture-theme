@@ -9,11 +9,9 @@
 <body class="mat-green-yellow">
 
   {{ partial "header.html" . }}
-  <section class="cover parallax-window">
+  <section class="cover index parallax-window">
     <!-- cover pic -->
-    <div class="imgHolder parallax" data-parallax data-src="{{ "images/landscape.jpg" | absURL }}">
-      <!-- <img src="{{ "images/landscape.jpg" | absURL }}" alt="cover" class="fluid"> -->
-    </div>
+    <div class="parallax" data-parallax data-src="{{ "images/landscape.jpg" | absURL }}"></div>
     <div class="venturer">
       <div class="avatar">
         <p class="avatar">
@@ -37,9 +35,7 @@
         <h2>This dude was too confused to make a bio.</h2>
       </header>
       <section>
-        cards: 
         {{ range $section }}
-
           <div class="row">
             <div class="col m12 l5">
               <div class="card">

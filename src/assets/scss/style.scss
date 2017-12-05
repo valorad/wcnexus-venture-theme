@@ -2,11 +2,23 @@
 
 // materialize custom patch
 .mat-green-yellow {
+  $localGreen: map-get($green, 'base');
+  $localYellow: map-get($yellow, 'accent-1');
+  $localRed: map-get($materialize-red, 'base');
   .primary {
-    @extend .green;
+    background-color: $localGreen;
+  }
+  .primary-text {
+    color: $localGreen;
   }
   .accent {
-    @extend .yellow;
+    background-color: $localYellow;
+  }
+  .accent-text {
+    color: $localYellow;
+  }
+  .error-text {
+    color: $localRed;
   }
 }
 
@@ -14,10 +26,13 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
+.card-action {
+  @extend .primary-text;
+}
+
 body {
   margin: 0px;
   padding: 0px;
-
   font-family: Roboto, noto-sans-cjk, Helvetica Neue, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -42,17 +57,12 @@ ul {
 }
 
 .parallax {
-  min-height: 50vh;
   background: transparent;
   overflow: hidden;
 }
 
 .parallax-slider {
   filter: blur(0.2em);
-}
-
-.parallax-mirror {
-  margin-top: 4em;
 }
 
 div.content {
@@ -70,8 +80,11 @@ nav.navTop {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0px 3em;
   position: fixed;
   z-index: 10;
+  @extend .primary;
+  
   .btn-flat {
     color: hsla(0,0%,100%,.87);
   }
@@ -88,8 +101,11 @@ nav.navTop {
 }
 
 /* Index */
-section.cover {
+section.cover.index {
   position: relative;
+  .parallax {
+    min-height: 60vh;
+  }
 }
 
 div.venturer {
@@ -131,11 +147,27 @@ div.avatar {
 }
 
 main.index header {
-  margin: 5em auto;
+  margin: 6em auto 4em auto;
   text-align: center;
+  color: #555;
   h2 {
+    margin: 0px;
     font-size: 2em;
   }
+}
+
+/* Single */
+section.cover.single {
+  position: relative;
+  .parallax {
+    min-height: 40vh;
+  }
+}
+
+main.single {
+  position: absolute;
+  width: 100%;
+  top: 30em;
 }
 
 @media only screen and (min-width: 992px) {
