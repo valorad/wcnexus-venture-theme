@@ -33,10 +33,6 @@ ul {
   margin: 0px;
 }
 
-// .mat-elevation-z6 {
-//   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-// }
-
 .fluid {
   max-width: 100%;
 }
@@ -48,6 +44,20 @@ ul {
 .parallax {
   min-height: 50vh;
   background: transparent;
+  overflow: hidden;
+}
+
+.parallax-slider {
+  filter: blur(0.2em);
+}
+
+.parallax-mirror {
+  margin-top: 4em;
+}
+
+div.content {
+  max-width: 1200px;
+  margin: 0px auto;
 }
 
 /* Header */
@@ -60,6 +70,8 @@ nav.navTop {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: fixed;
+  z-index: 10;
   .btn-flat {
     color: hsla(0,0%,100%,.87);
   }
@@ -78,14 +90,6 @@ nav.navTop {
 /* Index */
 section.cover {
   position: relative;
-  overflow: hidden;
-  height: 400px;
-  div.imgHolder {
-    // height: 300px;
-    img {
-      filter: blur(0.2em);
-    }
-  }
 }
 
 div.venturer {
@@ -95,6 +99,7 @@ div.venturer {
   top: 1em;
   transform: translateX(50%);
   right: 50%;
+  margin-top: 10vh;
   p {
     font-size: 1.5em;
     color: white;
@@ -121,7 +126,15 @@ div.social {
 div.avatar {
   img {
     border: solid 1px white;
-    width: 64px;
+    width: 128px;
+  }
+}
+
+main.index header {
+  margin: 5em auto;
+  text-align: center;
+  h2 {
+    font-size: 2em;
   }
 }
 

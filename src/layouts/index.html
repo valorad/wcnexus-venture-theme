@@ -31,13 +31,36 @@
       </div>
     </div>
   </section>
-  <section>
-    {{ range $section }}
-      <div>
-        <a href="{{ .Permalink }}">{{ .Title }}</a><br>
-      </div>
-    {{ end }}
-  </section>
+  <main class="index">
+    <div class="content">
+      <header>
+        <h2>This dude was too confused to make a bio.</h2>
+      </header>
+      <section>
+        cards: 
+        {{ range $section }}
+
+          <div class="row">
+            <div class="col m12 l5">
+              <div class="card">
+                <div class="card-image">
+                  <img src="{{ "images/defaultPost.png" | absURL }}">
+                  <span class="card-title">{{ .Title }}</span>
+                </div>
+                <div class="card-content">
+                  <p>{{ .Summary }}</p>
+                </div>
+                <div class="card-action">
+                  <a href="{{ .Permalink }}">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </section>
+    </div>
+
+  </main>
 
   {{ partial "body-script.html" . }}
 </body>
