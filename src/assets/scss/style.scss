@@ -26,7 +26,7 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
-.card-action {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   @extend .primary-text;
 }
 
@@ -160,15 +160,11 @@ main.index header {
 section.cover.single {
   position: relative;
   .parallax {
-    min-height: 40vh;
+    min-height: 55vh;
   }
 }
 
-main.single {
-  position: absolute;
-  width: 100%;
-  top: 30em;
-}
+
 
 @media only screen and (min-width: 992px) {
   /* Header */
@@ -177,4 +173,17 @@ main.single {
       position: static;
     }
   }
+
+  main.single {
+    position: absolute;
+    width: 100%;
+    top: 10em;
+    article {
+      min-height: 60vh;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
 }

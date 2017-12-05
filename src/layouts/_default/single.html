@@ -13,16 +13,20 @@
   </section>
 
   <main class="single">
-    <div class="content">
-      <article class="card">
-        <div class="card-content">
-          <span class="card-title">{{ .Title }}</span>
-          {{ .Content }}
-        </div>
-      </article>
+    <div class="mainHolder">
+      <div class="content">
+        <article class="card">
+          <div class="card-content">
+            <span class="card-title">{{ .Title }}</span>
+            {{ .Content }}
+          </div>
+        </article>
+      </div>
+      <footer>
+        {{ partial "footer.html" . }}
+      </footer>
     </div>
   </main>
-  {{ partial "footer.html" . }}
   {{ partial "body-script.html" . }}
 </body>
 </html>  
