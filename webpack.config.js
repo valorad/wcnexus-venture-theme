@@ -37,18 +37,7 @@ module.exports = {
             ]
           }
         )
-      },
-      
-      // {
-      //   test: /\.(png|jpe?g|gif|ico)$/,
-      //   use: 'file-loader?name=assets/[name].[ext]'
-      // },
-
-      // fonts has to copy to static folder
-      // {
-      //   test: /\.(svg|woff|woff2|ttf|eot)$/,
-      //   use: 'file-loader?name=static/fonts/[name].[ext]'
-      // }
+      }
     ]
   },
 
@@ -79,22 +68,21 @@ module.exports = {
        { 
         from: path.resolve(__dirname, "./src/theme.toml"),
         to: ''
+       },
+       { 
+        from: path.resolve(__dirname, "./LICENSE"),
+        to: ''
        }
     ]),
 
     new ExtractTextPlugin('./static/css/[name].css'),
 
-    // new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: true,
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    })
 
-    
   ]
-
-
-
-
 }
