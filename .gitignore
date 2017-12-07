@@ -59,4 +59,4 @@ typings/
 
 # Site Specific
 /.vscode/*
-.lock
+/dist/*

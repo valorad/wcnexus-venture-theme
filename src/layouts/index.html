@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+{{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+{{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+{{ $section_count := len $section }}
+
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
+{{ partial "head.html" . }}
+<body class="mat-green-yellow">
+
+  <!-- header -->
+  {{ partial "header.html" . }}
+  <section class="cover index parallax-window">
+    <!-- cover pic -->
+    <div class="parallax" data-parallax data-src="{{ "images/landscape.jpg" | absURL }}"></div>
+    <div class="venturer">
+      <div class="avatar">
+        <p>
+          <img src="{{ "images/fallout-VaultBoy-2.jpg" | absURL }}" alt="avatar" class="fluid round">
+        </p>
+        <p>Valorad</p>
+      </div>
+      <div class="social">
+        <ul>
+          <li><img src="{{ "images/weibo.png" | absURL }}" alt="weibo" class="fluid"></li>
+          <li><img src="{{ "images/zhihu.png" | absURL }}" alt="zhihu" class="fluid"></li>
+          <li><img src="{{ "images/twitter.png" | absURL }}" alt="twitter" class="fluid"></li>
+          <li><img src="{{ "images/github-social.png" | absURL }}" alt="github-social" class="fluid"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <main class="index">
+    <div class="content">
+      <header>
+        <h2>This dude was too confused to make a bio.</h2>
+      </header>
+      <section>
+        <div class="row">
+          {{ range $section }}
+          <div class="col m12 l6">
+            <article class="card">
+              <div class="card-image">
+                <a href="{{ .Permalink }}">
+                  <img src="{{ "images/defaultPost.png" | absURL }}">
+                  <span class="card-title">{{ .Title }}</span>
+                </a>
+              </div>
+              <div class="card-content">
+                <p>{{ .Summary }}</p>
+              </div>
+              <div class="card-action">
+                <a href="{{ .Permalink }}">Read more</a>
+              </div>
+            </article>
+          </div>
+          {{ end }}
+        </div>
+      </section>
+    </div>
+    <!-- footer -->
+    {{ partial "footer.html" . }}
+
+  </main>
+
+  {{ partial "body-script.html" . }}
+</body>
+</html>
