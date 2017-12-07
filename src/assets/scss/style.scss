@@ -2,23 +2,31 @@
 
 // materialize custom patch
 .mat-green-yellow {
-  $localGreen: map-get($green, 'base');
-  $localYellow: map-get($yellow, 'accent-1');
-  $localRed: map-get($materialize-red, 'base');
+  $localPrimary: map-get($green, 'base');
+  $localAccent: map-get($yellow, 'accent-1');
+  $localError: map-get($materialize-red, 'base');
   .primary {
-    background-color: $localGreen;
+    background-color: $localPrimary;
   }
   .primary-text {
-    color: $localGreen;
+    color: $localPrimary;
   }
   .accent {
-    background-color: $localYellow;
+    background-color: $localAccent;
   }
   .accent-text {
-    color: $localYellow;
+    color: $localAccent;
   }
   .error-text {
-    color: $localRed;
+    color: $localError;
+  }
+
+  .waves-primary .waves-ripple {
+    background-color: $localPrimary;
+  }
+
+  .waves-accent .waves-ripple {
+    background-color: $localAccent;
   }
 }
 
@@ -117,16 +125,23 @@ nav.navTop {
   .btn-flat {
     color: hsla(0,0%,100%,.87);
   }
+  a {
+    text-align: center;
+  }
+  i {
+    float: unset;
+    margin: 0px;
+    font-size: 32px;
+  }
   // padding: 8px 16px;
   a.holder {
     display: flex;
   }
-  .logo {
+  .icon-github {
     display: block;
-    width: 32px;
-    height: 32px;
     margin-right: 0.5em;
   }
+
 }
 
 /* Footer */
@@ -269,7 +284,7 @@ main.single {
   main.single {
     position: absolute;
     width: 100%;
-    top: 16em;
+    top: 22em;
     article {
       min-height: 60vh;
     }
