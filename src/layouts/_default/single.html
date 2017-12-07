@@ -3,6 +3,7 @@
 {{ partial "head.html" . }}
 <body class="mat-green-yellow">
 
+  <!-- header -->
   {{ partial "header.html" . }}
   <section class="cover single">
     <div class="parallax" data-parallax data-src="{{ "images/defaultPost.png" | absURL }}"></div>
@@ -15,16 +16,32 @@
   <main class="single">
     <div class="mainHolder">
       <div class="content">
-        <article class="card">
+        <article class="card post">
           <div class="card-content">
             <span class="card-title">{{ .Title }}</span>
+            <div class="authorHolder">
+              <div class="avatarBox">
+                <div class="avatar">
+                  <img src="{{ "images/fallout-VaultBoy-2.jpg" | absURL }}" alt="avatar" class="fluid round">
+                </div>
+                <div class="info">
+                  <p>Valorad</p>
+                  <small>posted on: {{ .PublishDate }}</small> <br>
+                  <small>modified on: {{ .Lastmod }}</small>
+                </div>
+              </div>
+              <div class="flexSpacer"></div>
+              <div class="action">
+                <a href="##"><i class="material-icons">share</i></a>
+              </div>
+            </div>
             {{ .Content }}
           </div>
         </article>
       </div>
-      <footer>
-        {{ partial "footer.html" . }}
-      </footer>
+      <!-- footer -->
+      {{ partial "footer.html" . }}
+
     </div>
   </main>
   {{ partial "body-script.html" . }}
