@@ -37,7 +37,18 @@ module.exports = {
             ]
           }
         )
-      }
+      },
+      
+      // {
+      //   test: /\.(png|jpe?g|gif|ico)$/,
+      //   use: 'file-loader?name=assets/[name].[ext]'
+      // },
+
+      // fonts has to copy to static folder
+      // {
+      //   test: /\.(svg|woff|woff2|ttf|eot)$/,
+      //   use: 'file-loader?name=static/fonts/[name].[ext]'
+      // }
     ]
   },
 
@@ -48,24 +59,6 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),
     new CleanWebpackPlugin(['dist']),
-    // new HtmlWebpackPlugin({
-    //   filename: 'index.html',
-    //   template: "src/layouts/index.html"
-    //   // chunks: [] // to tell what bundles to inject.
-    //   // name configured at entry point using a javascript object {}
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: '404.html',
-    //   template: "src/layouts/404.html"
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'list.html',
-    //   template: "src/layouts/_default/list.html"
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'single.html',
-    //   template: "src/layouts/_default/single.html"
-    // }),
     
     new CopyWebpackPlugin([
       { 
