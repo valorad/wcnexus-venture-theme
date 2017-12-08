@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{{ $featured_image := .Params.featured_image | default $.Site.Params.img0 }}
+
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
 {{ partial "head.html" . }}
 <body class="mat-green-yellow">
@@ -6,11 +8,7 @@
   <!-- header -->
   {{ partial "header.html" . }}
   <section class="cover single">
-    <div class="parallax" data-parallax data-src="{{ "images/defaultPost.png" | absURL }}"></div>
-
-    <!-- <div>
-      <h1>  </h1>
-    </div> -->
+    <div class="parallax" data-parallax data-src="{{ $featured_image | absURL }}"></div>
   </section>
 
   <main class="single">

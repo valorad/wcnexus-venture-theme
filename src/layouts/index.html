@@ -31,10 +31,10 @@
       </div>
       <div class="social">
         <ul>
-          {{ with $social.weibo }}<li><a href="{{ $social.weibo }}"><img src="{{ "images/weibo.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
-          {{ with $social.zhihu }}<li><a href="{{ $social.zhihu }}"><img src="{{ "images/zhihu.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
-          {{ with $social.twitter }}<li><a href="{{ $social.twitter }}"><img src="{{ "images/twitter.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
-          {{ with $social.github }}<li><a href="{{ $social.github }}"><img src="{{ "images/github-social.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.weibo }}<li><a href="{{ . }}"><img src="{{ "images/weibo.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.zhihu }}<li><a href="{{ . }}"><img src="{{ "images/zhihu.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.twitter }}<li><a href="{{ . }}"><img src="{{ "images/twitter.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.github }}<li><a href="{{ . }}"><img src="{{ "images/github-social.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
         </ul>
       </div>
     </div>
@@ -47,11 +47,12 @@
       <section>
         <div class="row">
           {{ range $section }}
+          {{ $featured_image := .Params.featured_image | default $.Site.Params.img0 }}
           <div class="col m12 l6">
             <article class="card">
               <div class="card-image">
                 <a href="{{ .Permalink }}">
-                  <img src="{{ "images/defaultPost.png" | absURL }}">
+                  <img src="{{ $featured_image | absURL }}">
                   <span class="card-title">{{ .Title }}</span>
                 </a>
               </div>

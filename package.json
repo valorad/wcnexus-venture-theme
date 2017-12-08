@@ -19,7 +19,7 @@
   "homepage": "https://github.com/valorad/wcnexus-venture-theme#readme",
   "dependencies": {
     "jquery-parallax.js": "https://github.com/pixelcog/parallax.js.git#v2.0.0-alpha",
-    "materialize-css": "^1.0.0-alpha.2"
+    "materialize-css": "^1.0.0-alpha.3"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
