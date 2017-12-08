@@ -4,6 +4,9 @@
 {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
 {{ $section_count := len $section }}
 
+{{ $user := $.Site.Params.user }}
+{{ $social := $.Site.Params.social }}
+
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
 {{ partial "head.html" . }}
 <body class="mat-green-yellow">
@@ -15,17 +18,23 @@
     <div class="parallax" data-parallax data-src="{{ "images/landscape.jpg" | absURL }}"></div>
     <div class="venturer">
       <div class="avatar">
+        <!-- avatar -->
+        {{ with $user.avatar }}
         <p>
-          <img src="{{ "images/fallout-VaultBoy-2.jpg" | absURL }}" alt="avatar" class="fluid round">
+          <img src="{{ $user.avatar | absURL }}" alt="{{ $user.name | default ("Mr. Nobody") }}'s avatar" class="fluid round">
         </p>
-        <p>Valorad</p>
+        {{ else }}
+        <div class="avatarPlaceholder round"></div>
+        {{ end }}
+        <!-- username -->
+        <p>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</p>
       </div>
       <div class="social">
         <ul>
-          <li><img src="{{ "images/weibo.png" | absURL }}" alt="weibo" class="fluid"></li>
-          <li><img src="{{ "images/zhihu.png" | absURL }}" alt="zhihu" class="fluid"></li>
-          <li><img src="{{ "images/twitter.png" | absURL }}" alt="twitter" class="fluid"></li>
-          <li><img src="{{ "images/github-social.png" | absURL }}" alt="github-social" class="fluid"></li>
+          {{ with $social.weibo }}<li><a href="{{ $social.weibo }}"><img src="{{ "images/weibo.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.zhihu }}<li><a href="{{ $social.zhihu }}"><img src="{{ "images/zhihu.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.twitter }}<li><a href="{{ $social.twitter }}"><img src="{{ "images/twitter.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
+          {{ with $social.github }}<li><a href="{{ $social.github }}"><img src="{{ "images/github-social.png" | absURL }}" alt="weibo" class="fluid"></a></li>{{ end }}
         </ul>
       </div>
     </div>
@@ -33,7 +42,7 @@
   <main class="index">
     <div class="content">
       <header>
-        <h2>This dude was too confused to make a bio.</h2>
+        <h2><h2>{{ $user.intro }}</h2></h2>
       </header>
       <section>
         <div class="row">

@@ -1,15 +1,19 @@
+{{ $user := $.Site.Params.user }}
+{{ $social := $.Site.Params.social }}
+
+
 <footer class="app page-footer primary">
   <div class="footer-copyright">
     <div class="container">
       <p>
-        <span>© 2017 Valorad the Oneiroseeker</span>
-        <span><a href="##" title="MIT License"><i class="iconfont icon-libra"></i></a></span>
+        <span>© 2017 {{ $user.fullName }}</span>
+        <span><a href="https://github.com/valorad/wcnexus-venture/blob/master/LICENSE" title="MIT License"><i class="iconfont icon-libra"></i></a></span>
       </p>
       <div class="social">
-        <a href="##"><i class="iconfont icon-weibo"></i></a>
-        <a href="##"><i class="iconfont icon-zhihu"></i></a>
-        <a href="##"><i class="iconfont icon-twitter"></i></a>
-        <a href="##"><i class="iconfont icon-github"></i></a>
+        {{ with $social.weibo }}<a href="{{ $social.weibo }}"><i class="iconfont icon-weibo"></i></a>{{ end }}
+        {{ with $social.zhihu }}<a href="{{ $social.zhihu }}"><i class="iconfont icon-zhihu"></i></a>{{ end }}
+        {{ with $social.twitter }}<a href="{{ $social.twitter }}"><i class="iconfont icon-twitter"></i></a>{{ end }}
+        {{ with $social.github }}<a href="{{ $social.github }}"><i class="iconfont icon-github"></i></a>{{ end }}
       </div>
     </div>
   </div>
