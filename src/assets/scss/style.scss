@@ -51,6 +51,22 @@ pre {
   padding: 1em;
 }
 
+div.tags {
+  margin-bottom: 24px;
+  span {
+    @extend span.badge;
+    @extend .primary;
+    font-weight: 300;
+    font-size: .8rem;
+    color: #fff;
+    border-radius: 2px;
+    float: unset;
+    padding: 0.5em;
+    margin-left: 0em;
+    margin-right: 1em;
+  }
+}
+
 // code {
 //   @extend span.badge;
 //   @extend span.badge.new;
@@ -235,8 +251,13 @@ section.single.cover {
 }
 
 main.single {
-  article.post .card-title {
-    font-size: 3em
+  article.post {
+    .card-title {
+      font-size: 3em
+    }
+    hr {
+      margin: 2em auto;
+    }
   }
   div.authorHolder {
     display: flex;
@@ -290,9 +311,9 @@ main.single {
   main.single {
     position: absolute;
     width: 100%;
-    top: 22em;
-    article {
-      min-height: 60vh;
+    top: 10em;
+    div.content {
+      min-height: 80vh;
     }
     .card {
       background-color: rgba(255, 255, 255, 0.7);

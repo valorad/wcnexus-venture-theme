@@ -57,6 +57,11 @@
                 </a>
               </div>
               <div class="card-content">
+                <div class="tags">
+                  {{ range .Params.tags }}
+                  <span>{{ . }}</span>
+                  {{ end }}
+                </div>
                 <p>{{ .Summary }}</p>
               </div>
               <div class="card-action">
