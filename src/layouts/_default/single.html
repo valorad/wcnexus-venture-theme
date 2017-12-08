@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {{ $featured_image := .Params.featured_image | default $.Site.Params.img0 }}
+{{ $user := $.Site.Params.user }}
 
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
 {{ partial "head.html" . }}
@@ -20,10 +21,17 @@
             <div class="authorHolder">
               <div class="avatarBox">
                 <div class="avatar">
-                  <img src="{{ "images/fallout-VaultBoy-2.jpg" | absURL }}" alt="avatar" class="fluid round">
+                <!-- avatar -->
+                {{ with $user.avatar }}
+
+                  <img src="{{ $user.avatar | absURL }}" alt="{{ $user.name | default ("Mr. Nobody") }}'s avatar" class="fluid round">
+
+                {{ else }}
+                <div class="avatarPlaceholder round"></div>
+                {{ end }}
                 </div>
                 <div class="info">
-                  <p>Valorad</p>
+                  <p>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</p>
                   <small>posted on: {{ .PublishDate }}</small> <br>
                   <small>modified on: {{ .Lastmod }}</small>
                 </div>

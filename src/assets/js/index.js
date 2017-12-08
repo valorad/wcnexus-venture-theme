@@ -1,5 +1,7 @@
-// (function($){
-//   $(function(){
-//     $('.parallax').parallax();
-//   }); // end of document ready
-// })(jQuery); // end of jQuery name space
+export default function () {
+  var elem = document.querySelector('.sidenav');
+  var options = {
+    edge: "left"
+  }
+  var instance = new M.Sidenav(elem, options);
+};

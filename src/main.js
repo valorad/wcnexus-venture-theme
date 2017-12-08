@@ -3,4 +3,7 @@ import './assets/scss/syntax.scss';
 import './assets/scss/style.scss';
 
 // scripts
-import './assets/js/index';
+import entry from './assets/js/index';
+
+entry();
+

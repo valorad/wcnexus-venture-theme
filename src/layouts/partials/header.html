@@ -1,6 +1,7 @@
+{{ $user := $.Site.Params.user }}
 <header>
   <nav class="navTop">
-    
+    <a href="#" data-target="navMobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <a class="waves-effect waves-primary btn-flat brand-logo"><i class="icomoon icon-wcnexus"></i></a>
     <div class="hide-on-med-and-down">
       <a class="waves-effect waves-primary btn-flat" href="http://www.wcnexus.com/#index">Index</a>
@@ -13,5 +14,28 @@
         <span>Github</span>
       </a>
     </div>
+  </nav>
+  <!-- Mobile slidenav -->
+  <nav id="navMobile" class="sidenav">
+    <ul>
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img class="fliud cover" src="{{ "images/landscape.jpg" | absURL }}">
+          </div>
+          <a href="#!user">
+            <img class="round avatar" src="{{ $user.avatar | absURL }}">
+          </a>
+          <a href="#!name">
+            <span>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</span>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a href="#!" class="waves-effect">Index</a>
+      </li>
+      <li><a href="#!" class="waves-effect">Venture</a></li>
+      <!-- <li><div class="divider"></div></li> -->
+    </ul>
   </nav>
 </header>

@@ -44,6 +44,7 @@ body {
   font-family: Roboto, noto-sans-cjk, Helvetica Neue, sans-serif;
   font-size: 14px;
   font-weight: 500;
+  background-color: #f0f0f0;
 }
 
 // code-blocks
@@ -67,10 +68,6 @@ div.tags {
   }
 }
 
-// code {
-//   @extend span.badge;
-//   @extend span.badge.new;
-// }
 h1 {
   font-size: 3rem;
 }
@@ -158,6 +155,15 @@ nav.navTop {
     margin-right: 0.5em;
   }
 
+}
+
+#navMobile {
+  img.cover {
+    width: 100%;
+  }
+  img.avatar {
+    width: 64px;
+  }
 }
 
 /* Footer */
@@ -269,6 +275,12 @@ main.single {
   }
   div.avatar img {
     width: 64px;
+  }
+  div.avatarPlaceholder {
+    height: 64px;
+    width: 64px;
+    background-color: #eeeeee;
+    display: inline-block;
   }
   div.info {
     margin: 0px 1em;
