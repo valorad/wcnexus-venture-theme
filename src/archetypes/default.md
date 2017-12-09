@@ -4,4 +4,5 @@ date = {{ .Date }}
 draft: true
 featured_image = ""
 tags = []
+isCJKLanguage = false
 +++

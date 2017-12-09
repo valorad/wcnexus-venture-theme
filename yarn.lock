@@ -1782,7 +1782,7 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-materialize-css@^1.0.0-alpha.2:
+materialize-css@^1.0.0-alpha.3:
   version "1.0.0-alpha.2"
   resolved "https://registry.yarnpkg.com/materialize-css/-/materialize-css-1.0.0-alpha.2.tgz#b5efa89f474ad982b36816fe012dfe28aa2ff473"
 

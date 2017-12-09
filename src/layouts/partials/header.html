@@ -1,11 +1,14 @@
 {{ $user := $.Site.Params.user }}
+{{ $navs := $.Site.Params.navs }}
 <header>
   <nav class="navTop">
     <a href="#" data-target="navMobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <a class="waves-effect waves-primary btn-flat brand-logo"><i class="icomoon icon-wcnexus"></i></a>
     <div class="hide-on-med-and-down">
-      <a class="waves-effect waves-primary btn-flat" href="http://www.wcnexus.com/#index">Index</a>
-      <a class="waves-effect waves-primary btn-flat" href="/">Venture</a>
+    {{ range $navs }}
+      <a class="waves-effect waves-primary btn-flat" href="{{ .link }}">{{ .title }}</a>
+    {{ end }}
+      <!-- <a class="waves-effect waves-primary btn-flat" href="/">Venture</a> -->
     </div>
     <div class="flexSpacer"></div>
     <div class="hide-on-med-and-down">
@@ -21,7 +24,7 @@
       <li>
         <div class="user-view">
           <div class="background">
-            <img class="fliud cover" src="{{ "images/landscape.jpg" | absURL }}">
+            <img class="fliud cover" src="{{ $user.cover | absURL }}">
           </div>
           <a href="#!user">
             <img class="round avatar" src="{{ $user.avatar | absURL }}">
@@ -31,10 +34,13 @@
           </a>
         </div>
       </li>
+      {{ range $navs }}
       <li>
-        <a href="#!" class="waves-effect">Index</a>
+        <a href="{{ .link }}" class="waves-effect waves-primary">{{ .title }}</a>
       </li>
-      <li><a href="#!" class="waves-effect">Venture</a></li>
+      {{ end }}
+
+      <!-- <li><a href="#!" class="waves-effect">Venture</a></li> -->
       <!-- <li><div class="divider"></div></li> -->
     </ul>
   </nav>

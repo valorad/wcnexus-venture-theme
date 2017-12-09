@@ -15,7 +15,7 @@
   {{ partial "header.html" . }}
   <section class="cover index parallax-window">
     <!-- cover pic -->
-    <div class="parallax" data-parallax data-src="{{ "images/landscape.jpg" | absURL }}"></div>
+    <div class="parallax" data-parallax data-src="{{ $user.cover | absURL }}"></div>
     <div class="venturer">
       <div class="avatar">
         <!-- avatar -->
@@ -62,7 +62,7 @@
                   <span>{{ . }}</span>
                   {{ end }}
                 </div>
-                <p>{{ .Summary }}</p>
+                <p>{{ .Summary }}...</p>
               </div>
               <div class="card-action">
                 <a href="{{ .Permalink }}">Read more</a>

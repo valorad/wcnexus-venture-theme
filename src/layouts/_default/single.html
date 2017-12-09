@@ -41,7 +41,9 @@
                 <a href="##"><i class="material-icons">share</i></a>
               </div>
             </div>
-            {{ .Content }}
+            <div class="postContent">
+              {{ .Content }}
+            </div>
             <hr>
             <div class="tags">
               {{ range .Params.tags }}
