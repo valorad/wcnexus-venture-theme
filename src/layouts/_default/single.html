@@ -32,8 +32,8 @@
                 </div>
                 <div class="info">
                   <p>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</p>
-                  <small>posted on: {{ .PublishDate }}</small> <br>
-                  <small>modified on: {{ .Lastmod }}</small>
+                  <small>Posted on: <span class="date">{{ .PublishDate }} ago</span></small> <br>
+                  <small>Modified on: <span class="date">{{ .Lastmod }} ago</span></small>
                 </div>
               </div>
               <div class="flexSpacer"></div>
