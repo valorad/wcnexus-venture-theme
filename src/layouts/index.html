@@ -8,7 +8,10 @@
 {{ $social := $.Site.Params.social }}
 
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
-{{ partial "head.html" . }}
+<head>
+  {{ partial "head-common.html" . }}
+  <link rel="stylesheet" href="{{ "css/index.css" | absURL }}">
+</head>
 <body class="mat-green-yellow">
 
   <!-- header -->

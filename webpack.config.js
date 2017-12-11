@@ -19,7 +19,38 @@ module.exports = {
   module: {
     rules: [
       {
+        // scoped scss
         test: /\.scss$/,
+        include: path.resolve(__dirname, './src/assets/scss/scoped'),
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "./static/css/[name].css"
+            }
+          },
+          // {
+          //   loader: "css-loader",
+          //   options: {
+          //     minimize: true,
+          //     sourceMap: true
+          //   }
+          // },
+          // {
+          //   loader: "raw-loader"
+          // },
+          {
+            loader: "sass-loader",
+            options: {
+              outputStyle: 'compressed'
+            }
+          }
+        ]
+      },
+      {
+        // global scss including node modules
+        test: /\.scss$/,
+        exclude: path.resolve(__dirname, './src/assets/scss/scoped'),
         use: ExtractTextPlugin.extract(
           {
             fallback: 'style-loader',

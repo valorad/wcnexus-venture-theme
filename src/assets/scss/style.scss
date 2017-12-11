@@ -1,34 +1,7 @@
-@import '~materialize-css/sass/materialize.scss';
+@import './variables';
+@import './theme';
 
-// materialize custom patch
-.mat-green-yellow {
-  $localPrimary: map-get($green, 'base');
-  $localAccent: map-get($yellow, 'accent-1');
-  $localError: map-get($materialize-red, 'base');
-  .primary {
-    background-color: $localPrimary;
-  }
-  .primary-text {
-    color: $localPrimary;
-  }
-  .accent {
-    background-color: $localAccent;
-  }
-  .accent-text {
-    color: $localAccent;
-  }
-  .error-text {
-    color: $localError;
-  }
-
-  .waves-primary .waves-ripple {
-    background-color: $localPrimary;
-  }
-
-  .waves-accent .waves-ripple {
-    background-color: $localAccent;
-  }
-}
+@import '~materialize-css/sass/components/badges';
 
 .btn-flat:hover {
   background: rgba(0, 0, 0, 0.2);
@@ -111,10 +84,6 @@ ul {
   overflow: hidden;
 }
 
-.parallax-slider {
-  filter: blur(0.2em);
-}
-
 div.content {
   max-width: 1200px;
   margin: 0px auto;
@@ -189,128 +158,6 @@ footer.app {
 
 }
 
-/* Index */
-section.cover.index {
-  position: relative;
-  .parallax {
-    min-height: 60vh;
-  }
-  div.venturer {
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 1em;
-    transform: translateX(50%);
-    right: 50%;
-    margin-top: 10vh;
-    p {
-      font-size: 1.5em;
-      color: white;
-    }
-    div.avatarPlaceholder {
-      height: 128px;
-      width: 128px;
-      background-color: #eeeeee;
-      margin: 0px auto;
-    }
-  }
-  div.social {
-    li { 
-      display: inline-block;
-      margin: 1em;
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-      img {
-        width: 32px;
-      }
-    }
-    li:hover {
-      box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
-      background-color: rgba(128, 128, 128, 0.8);
-    }
-  }
-  div.avatar {
-    img {
-      border: solid 1px white;
-      width: 128px;
-    }
-  }
-}
-
-main.index header {
-  margin: 6em auto 4em auto;
-  text-align: center;
-  color: #555;
-  h2 {
-    margin: 0px;
-    font-size: 2em;
-  }
-}
-
-/* Single */
-section.single.cover {
-  position: relative;
-  .parallax {
-    min-height: 55vh;
-  }
-}
-
-main.single {
-  article.post {
-    .card-title {
-      font-size: 3em;
-      line-height: 64px;
-    }
-    hr {
-      margin: 2em auto;
-    }
-  }
-  div.authorHolder {
-    display: flex;
-    margin: 2em auto;
-    padding: 1em;
-  }
-  div.avatarBox {
-    display: flex;
-  }
-  div.avatar img {
-    width: 64px;
-  }
-  div.avatarPlaceholder {
-    height: 64px;
-    width: 64px;
-    background-color: #eeeeee;
-    display: inline-block;
-  }
-  div.postContent{
-    p {
-      margin: 1em auto;
-    }
-    li {
-      padding: 1em;
-    }
-    li:before {
-      content: '> ';
-    }
-  }
-
-  div.info {
-    margin: 0px 1em;
-    p {
-      font-weight: bold;
-    }
-  }
-  div.action {
-    line-height: 5em;
-    a {
-      @extend .primary-text;
-    }
-  }
-}
-
-
-
 @media only screen and (min-width: 992px) {
   /* Header */
   nav.navTop {
@@ -330,18 +177,6 @@ main.single {
       position: absolute;
       right: 1em;
       top: -0.5em;
-    }
-  }
-
-  main.single {
-    position: absolute;
-    width: 100%;
-    top: 10em;
-    div.content {
-      min-height: 80vh;
-    }
-    .card {
-      background-color: rgba(255, 255, 255, 0.7);
     }
   }
 

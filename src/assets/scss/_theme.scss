@@ -1,0 +1,34 @@
+@import '~materialize-css/sass/components/color-variables';
+
+$badge-bg-color: map-get($green, 'base');
+$secondary-color: map-get($yellow, 'base');
+
+// materialize custom patch
+.mat-green-yellow {
+  $localPrimary: map-get($green, 'base');
+  $localAccent: map-get($yellow, 'accent-1');
+  $localError: map-get($materialize-red, 'base');
+  .primary {
+    background-color: $localPrimary;
+  }
+  .primary-text {
+    color: $localPrimary;
+  }
+  .accent {
+    background-color: $localAccent;
+  }
+  .accent-text {
+    color: $localAccent;
+  }
+  .error-text {
+    color: $localError;
+  }
+
+  .waves-primary .waves-ripple {
+    background-color: $localPrimary;
+  }
+
+  .waves-accent .waves-ripple {
+    background-color: $localAccent;
+  }
+}

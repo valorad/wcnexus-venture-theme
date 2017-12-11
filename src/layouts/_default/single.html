@@ -3,12 +3,16 @@
 {{ $user := $.Site.Params.user }}
 
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}">
-{{ partial "head.html" . }}
+<head>
+  {{ partial "head-common.html" . }}
+  <link rel="stylesheet" href="{{ "css/single.css" | absURL }}">
+</head>
+
 <body class="mat-green-yellow">
 
   <!-- header -->
   {{ partial "header.html" . }}
-  <section class="cover single">
+  <section class="cover">
     <div class="parallax" data-parallax data-src="{{ $featured_image | absURL }}"></div>
   </section>
 
