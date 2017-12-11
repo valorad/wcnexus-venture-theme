@@ -1,13 +1,32 @@
 import { formatDistance } from 'date-fns';
 
-export default () => {
-  // side nav init
-  const elem = document.querySelector('.sidenav');
-  const options = {
-    edge: "left"
+/**
+ * @param {string} eleSelector
+ * @param {any} opts
+ * @param {any} instanceClass 
+ * init materializecss components
+ */
+const initializeElem = (eleSelector, options={}, instanceClass) => {
+  const elem = document.querySelector(eleSelector);
+  if (eleSelector && instanceClass) {
+    return new instanceClass(elem, options)
   }
-  const instance = new M.Sidenav(elem, options);
+};
 
+// initSideNav = () => {
+//   // side nav init
+//   const elem = document.querySelector('.sidenav');
+//   const options = {
+//     edge: "left"
+//   }
+//   return new M.Sidenav(elem, options);
+// };
+
+export default () => {
+
+  initializeElem('.sidenav', {edge: "left"}, M.Sidenav);
+
+  // const w9 = new M.FloatingActionButton()
 
   // date transformation in <time class=date> tag.
   let dates = document.querySelectorAll("time.date"); // dates: NodeListOf<Element>
@@ -17,10 +36,6 @@ export default () => {
     let re = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/;
     let dateCore = re.exec(date.innerHTML)[0];
     date.innerHTML = formatDistance(new Date(dateCore), new Date())
-    // console.log(date.innerHTML);
-    // console.log(new Date(date.innerHTML));
-    // console.log(new Date());
-    // console.log(formatDistance(new Date(date.innerHTML), new Date()));
   }
   
 };

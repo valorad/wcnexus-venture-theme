@@ -29,16 +29,6 @@ module.exports = {
               name: "./static/css/[name].css"
             }
           },
-          // {
-          //   loader: "css-loader",
-          //   options: {
-          //     minimize: true,
-          //     sourceMap: true
-          //   }
-          // },
-          // {
-          //   loader: "raw-loader"
-          // },
           {
             loader: "sass-loader",
             options: {
@@ -69,9 +59,29 @@ module.exports = {
           }
         )
       },
+      {
+        // scoped javascript
+        test: /\.js$/,
+        include: path.resolve(__dirname, './src/assets/js/scoped'),
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "./static/js/[name].js"
+            }
+          },
+          {
+            loader: "babel-loader"
+          }
+        ]
+      },
+      // global javascript
       { 
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          path.resolve(__dirname, './src/assets/js/scoped'),
+        ],
         use: "babel-loader"
       }
     ]
