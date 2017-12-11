@@ -1,7 +1,8 @@
-export default function () {
-  var elem = document.querySelector('.sidenav');
-  var options = {
+export default () => {
+  // side nav init
+  const elem = document.querySelector('.sidenav');
+  const options = {
     edge: "left"
   }
-  var instance = new M.Sidenav(elem, options);
+  const instance = new M.Sidenav(elem, options);
 };
