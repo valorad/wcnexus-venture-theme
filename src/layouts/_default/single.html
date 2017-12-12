@@ -49,8 +49,8 @@
                     <i class="large material-icons">share</i>
                   </a>
                   <ul>
-                    <li><a class="btn-floating red"><i class="iconfont icon-weibo"></i></a></li>
-                    <li><a class="btn-floating cyan"><i class="iconfont icon-twitter"></i></a></li>
+                    <li><a class="btn-floating red" href="http://service.weibo.com/share/share.php?appkey={{ $.Site.Params.weiboAPI }}&title={{ .Title }}&url={{ .Permalink }}&pic=&searchPic=false&style=simple" target="_blank"><i class="iconfont icon-weibo"></i></a></li>
+                    <li><a class="btn-floating cyan" href="https://twitter.com/intent/tweet?text=I've%20found%20a%20nice%20post%20on%20wcnexus!%20View%20{{ .Title }}%20at%20{{ .Permalink }}" target="_blank"><i class="iconfont icon-twitter"></i></a></li>
                   </ul>
                 </div>
 
