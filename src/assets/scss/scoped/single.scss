@@ -54,11 +54,19 @@ main.single {
     }
   }
   div.action {
-    line-height: 5em;
+    position: relative;
     a {
       @extend .primary-text;
     }
   }
+  div.share {
+    z-index: 1;
+    position: absolute;
+    ul {
+      top: 1.8em;
+    }
+  }
+
 }
 
 @media only screen and (min-width: 992px) {

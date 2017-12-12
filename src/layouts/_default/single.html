@@ -37,12 +37,24 @@
                 <div class="info">
                   <p>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</p>
                   <small>Posted on: <time class="date">{{ .PublishDate }}</time> ago</small> <br>
-                  <small>Modified on: <time class="date">{{ .Lastmod }}</time>ago</small>
+                  <small>Modified on: <time class="date">{{ .Lastmod }}</time> ago</small>
                 </div>
               </div>
               <div class="flexSpacer"></div>
               <div class="action">
-                <a href="##"><i class="material-icons">share</i></a>
+                <!-- <a href="##"><i class="material-icons"></i></a> -->
+
+                <div class="fixed-action-btn share">
+                  <a class="btn-floating btn-large primary">
+                    <i class="large material-icons">share</i>
+                  </a>
+                  <ul>
+                    <li><a class="btn-floating red"><i class="iconfont icon-weibo"></i></a></li>
+                    <li><a class="btn-floating cyan"><i class="iconfont icon-twitter"></i></a></li>
+                  </ul>
+                </div>
+
+
               </div>
             </div>
             <div class="postContent">
