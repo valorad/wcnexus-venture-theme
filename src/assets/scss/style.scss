@@ -109,19 +109,23 @@ nav.navTop {
   }
   a {
     text-align: center;
+    text-transform: unset;
+  }
+  a.brand-logo {
+    display: flex;
+    > span {
+      font-size: 0.9em;
+      margin-left: 0.3em;
+    }
   }
   i {
     float: unset;
     margin: 0px;
     font-size: 32px;
   }
-  // padding: 8px 16px;
+
   a.holder {
     display: flex;
-  }
-  .icon-github {
-    display: block;
-    margin-right: 0.5em;
   }
 
 }
@@ -163,6 +167,10 @@ footer.app {
   nav.navTop {
     a.brand-logo {
       position: static;
+    }
+    .icon-github {
+      display: block;
+      margin-right: 0.5em;
     }
   }
 
