@@ -8,6 +8,7 @@ A hugo theme for wcnexus.com venture page.
 - Customizable user info
 - Blog code block syntax highlighting
 - Share posts to Weibo and Twitter
+- i18n
 
 ## Production Deployment
 
@@ -25,7 +26,7 @@ A hugo theme for wcnexus.com venture page.
 First you have to collect dependent node modules.
 
 ``` bash
-  npm run install
+  npm install
 ```
 
 Build the theme once you are satisfied with it.
@@ -34,10 +35,9 @@ Build the theme once you are satisfied with it.
   npm run build
 ```
 
-Manually copy everything under `dist` folder to the `themes` directory of a test site.
+Manually copy everything under `dist` folder to the `themes` directory of a hugo site.
 
 ## Todo
-- i18n
 - index blog pagination
 
 ## Credits
