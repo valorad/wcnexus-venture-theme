@@ -128,6 +128,19 @@ nav.navTop {
     display: flex;
   }
 
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    .btn-flat {
+      padding: 1em;
+    }
+    i.lang {
+      line-height: 1em;
+      font-size: 2.5em;
+      margin-right: 0.1em;
+    }
+  }
+
 }
 
 #navMobile {
@@ -177,6 +190,14 @@ footer.app {
     .icon-github {
       display: block;
       margin-right: 0.5em;
+    }
+    footer {
+      .btn-flat {
+        padding: 0px 2rem;
+      }
+      i.lang {
+        margin-right: 0.5em;
+      }
     }
   }
 

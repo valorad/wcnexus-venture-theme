@@ -13,12 +13,24 @@
     {{ end }}
     </div>
     <div class="flexSpacer"></div>
-    <div>
+    <footer class="actions">
+      <a class="waves-effect waves-primary btn-flat holder dropdown-trigger" data-target='navDDChangeLang'>
+        <i class="material-icons lang">language</i>
+        <span class="hide-on-med-and-down">Change Language</span>
+      </a>
       <a class="waves-effect waves-primary btn-flat holder" href="https://github.com/valorad/wcnexus.com" target="_blank">
         <i class="iconfont icon-github"></i>
         <span class="hide-on-med-and-down">Github</span>
       </a>
-    </div>
+
+      <!-- Dropdown Structure -->
+      <ul id='navDDChangeLang' class='dropdown-content'>
+        {{ range $.Site.Languages }}
+        <li><a href="{{ $.Site.BaseURL }}{{ . }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+
+    </footer>
   </nav>
   <!-- Mobile slidenav -->
   <nav id="navMobile" class="sidenav">

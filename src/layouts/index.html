@@ -68,7 +68,7 @@
                 <p>{{ .Summary }}...</p>
               </div>
               <div class="card-action">
-                <a href="{{ .Permalink }}">Read more</a>
+                <a href="{{ .Permalink | absLangURL }}">Read more</a>
               </div>
             </article>
           </div>

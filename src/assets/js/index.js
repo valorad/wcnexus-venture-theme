@@ -25,6 +25,7 @@ const initializeElem = (eleSelector, options={}, instanceClass) => {
 export default () => {
 
   initializeElem('.sidenav', {edge: "left"}, M.Sidenav);
+  initializeElem('.dropdown-trigger', {}, M.Dropdown);
 
   // const w9 = new M.FloatingActionButton()
 
