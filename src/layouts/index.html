@@ -51,7 +51,7 @@
         <div class="row">
           {{ range $section }}
           {{ $featured_image := .Params.featured_image | default $.Site.Params.img0 }}
-          <div class="col m12 l6">
+          <div class="cardItem">
             <article class="card">
               <div class="card-image">
                 <a href="{{ .Permalink }}">

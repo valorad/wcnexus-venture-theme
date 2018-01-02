@@ -51,12 +51,29 @@ section.cover {
   }
 }
 
-main.index header {
-  margin: 6em auto 4em auto;
-  text-align: center;
-  color: #555;
-  h2 {
-    margin: 0px;
-    font-size: 2em;
+main.index {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-title {
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  }
+  header {
+    margin: 6em auto 4em auto;
+    text-align: center;
+    color: #555;
+    h2 {
+      margin: 0px;
+      font-size: 2em;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main.index .cardItem {
+    margin: 1em;
+    max-width: 30em;
   }
 }

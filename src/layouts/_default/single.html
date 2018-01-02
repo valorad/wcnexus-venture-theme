@@ -37,7 +37,7 @@
                 <div class="info">
                   <p>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</p>
                   <small>Posted on: <time class="date">{{ .PublishDate }}</time> ago</small> <br>
-                  <small>Modified on: <time class="date">{{ .Lastmod }}</time> ago</small>
+                  <!-- <small>Modified on: <time class="date">{{ .Lastmod }}</time> ago</small> -->
                 </div>
               </div>
               <div class="flexSpacer"></div>
@@ -68,13 +68,33 @@
             </div>
           </div>
         </article>
+        <div class="audience">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "{{ .Permalink }}";  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = "{{ .Title }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+    
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://wcnexus.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
       </div>
-      <!-- footer -->
-      {{ partial "footer.html" . }}
-
     </div>
+
+    <!-- footer -->
+    {{ partial "footer.html" . }}
+
   </main>
+
   {{ partial "body-script.html" . }}
+
   <script src="{{ "js/single.js" | absURL }}"></script>
 </body>
 </html>  
