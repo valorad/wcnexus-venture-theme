@@ -124,6 +124,10 @@ nav.navTop {
     font-size: 32px;
   }
 
+  .icon-github {
+    line-height: 0.4em;
+  }
+
   a.holder {
     display: flex;
   }
@@ -135,9 +139,9 @@ nav.navTop {
       padding: 1em;
     }
     i.lang {
-      line-height: 1em;
+      line-height: 0.4em;
       font-size: 2.5em;
-      margin-right: 0.1em;
+      margin-right: 0.4em;
     }
   }
 
@@ -190,12 +194,14 @@ footer.app {
     .icon-github {
       display: block;
       margin-right: 0.5em;
+      line-height: 1em;
     }
     footer {
       .btn-flat {
         padding: 0px 2rem;
       }
       i.lang {
+        line-height: 1em;
         margin-right: 0.5em;
       }
     }
