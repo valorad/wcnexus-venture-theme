@@ -112,6 +112,11 @@ module.exports = {
         ignore: [".gitkeep"]
        },
        { 
+        from: path.resolve(__dirname, "./src/i18n"),
+        to: 'i18n',
+        ignore: [".gitkeep"]
+       },
+       { 
         from: path.resolve(__dirname, "./src/theme.toml"),
         to: ''
        },

@@ -1,3 +1,22 @@
-{
-  
-}
+[
+  {
+    "id": "changeLang",
+    "translation": "Change Language"
+  },
+  {
+    "id": "github",
+    "translation": "Github"
+  },
+  {
+    "id": "readMore",
+    "translation": "Read more"
+  },
+  {
+    "id": "postedOn",
+    "translation": "Posted on"
+  },
+  {
+    "id": "ago",
+    "translation": "ago"
+  }
+]

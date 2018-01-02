@@ -36,7 +36,7 @@
                 </div>
                 <div class="info">
                   <p>{{ with $user.name }}{{ $user.name }}{{ else }}Mr. Nobody{{ end }}</p>
-                  <small>Posted on: <time class="date">{{ .PublishDate }}</time> ago</small> <br>
+                  <small>{{ T "postedOn" }} <time class='date'>{{ .PublishDate }}</time> {{ T "ago" }} </small> <br>
                   <!-- <small>Modified on: <time class="date">{{ .Lastmod }}</time> ago</small> -->
                 </div>
               </div>

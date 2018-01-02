@@ -1,3 +1,22 @@
-{
-  
-}
+[
+  {
+    "id": "changeLang",
+    "translation": "切换语言"
+  },
+  {
+    "id": "github",
+    "translation": "给特哈布"
+  },
+  {
+    "id": "readMore",
+    "translation": "阅读全文"
+  },
+  {
+    "id": "postedOn",
+    "translation": "发布于"
+  },
+  {
+    "id": "ago",
+    "translation": "前"
+  }
+]
