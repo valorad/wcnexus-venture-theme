@@ -60,3 +60,5 @@ typings/
 # Site Specific
 /.vscode/*
 /dist/*
+*.lock
+package-*.json
