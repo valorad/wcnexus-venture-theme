@@ -8,9 +8,10 @@
       <span class="hide-on-med-and-down">wcnexus</span>
     </a>
     <div class="hide-on-med-and-down">
-    {{ range $navs }}
-      <a class="waves-effect waves-primary btn-flat" href="{{ .link }}">{{ .title }}</a>
-    {{ end }}
+      {{ range $navs }}
+        {{ $titleTrans := index .title $.Site.Language.Lang }}
+        <a class="waves-effect waves-primary btn-flat" href="{{ .link }}">{{ $titleTrans }}</a>
+      {{ end }}
     </div>
     <div class="flexSpacer"></div>
     <footer class="actions">
