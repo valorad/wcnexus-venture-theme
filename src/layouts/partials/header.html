@@ -50,8 +50,9 @@
         </div>
       </li>
       {{ range $navs }}
+      {{ $titleTrans := index .title $.Site.Language.Lang }}
       <li>
-        <a href="{{ .link }}" class="waves-effect waves-primary">{{ .title }}</a>
+        <a href="{{ .link }}" class="waves-effect waves-primary">{{ $titleTrans }}</a>
       </li>
       {{ end }}
 
