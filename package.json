@@ -1,39 +1,49 @@
 {
   "name": "wcnexus-venture-theme",
-  "version": "1.1.0",
-  "description": "Venture page theme for wcnexus.com",
+  "version": "1.2.0",
+  "description": "A hugo theme for wcnexus.com venture page.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --bail --progress"
+    "serve": "gulp serve",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/valorad/wcnexus-venture-theme.git"
   },
-  "author": "Valorad",
+  "keywords": [
+    "gulp",
+    "webpack"
+  ],
+  "author": "valorad",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/valorad/wcnexus-venture-theme/issues"
   },
   "homepage": "https://github.com/valorad/wcnexus-venture-theme#readme",
-  "dependencies": {
-    "date-fns": "^2.0.0-alpha.7",
-    "jquery-parallax.js": "https://github.com/pixelcog/parallax.js.git#v2.0.0-alpha",
-    "materialize-css": "^1.0.0-alpha.3"
-  },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.17",
-    "copy-webpack-plugin": "^4.2.3",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.0",
-    "webpack": "^3.9.1"
+    "autoprefixer": "^8.1.0",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-cssimport": "^6.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "pump": "^3.0.0",
+    "tiny-lr": "^1.1.1",
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.0",
+    "webpack-stream": "^4.0.2"
+  },
+  "dependencies": {
+    "@pixelcog/parallax.js": "https://github.com/pixelcog/parallax.js.git#v2.0.0-alpha",
+    "babel-polyfill": "^6.26.0",
+    "date-fns": "^2.0.0-alpha.7",
+    "materialize-css": "^1.0.0-beta"
   }
 }

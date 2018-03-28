@@ -19,9 +19,9 @@ A hugo theme for wcnexus.com venture page.
 
 ### Prerequisites
 
-- node.js > 6.9.0
+> node.js > 6.9.0
 
-### Dev with webpack
+### Dev with gulp
 
 First you have to collect dependent node modules.
 
@@ -29,13 +29,34 @@ First you have to collect dependent node modules.
   npm install
 ```
 
-Build the theme once you are satisfied with it.
+Run tiny live-reload server
+``` bash
+  npm run serve
+```
+
+Build the theme only.
 
 ``` bash
   npm run build
 ```
 
-Manually copy everything under `dist` folder to the `themes` directory of a hugo site.
+Then manually copy everything under `dist` folder to the `themes` directory of a hugo site.
+
+(
+  
+  Alternatively, you may create a symlink to `dist` folder, to simplify your dev process:
+
+  ``` powershell
+  # windows powershell (needs admin privilege)
+  New-Item -Path "path/to/hugo/theme/wcnexus-venture" -ItemType SymbolicLink -Value "path/to/wcnexus-venture-theme/dist"
+  ```
+
+  ``` bash
+  # linux/macos bash
+  ln -s "path/to/wcnexus-venture-theme/dist" "path/to/hugo/theme/wcnexus-venture"
+  ```
+
+)
 
 ## Todo
 - index blog pagination
@@ -45,6 +66,7 @@ Manually copy everything under `dist` folder to the `themes` directory of a hugo
 - [jquery-parallax.js](https://github.com/pixelcog/parallax.js.git#v2.0.0-alpha)
 - [google/material-design-icons](https://github.com/google/material-design-icons/)
 - [iconfonts](http://www.iconfont.cn)
+- [iconmoon](https://icomoon.io/)
 
 ## License
 MIT

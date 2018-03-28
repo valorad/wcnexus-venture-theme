@@ -1,7 +1,7 @@
+@import '../../../node_modules/materialize-css/sass/materialize';
 @import './variables';
 @import './theme';
-
-@import '~materialize-css/sass/components/badges';
+@import './syntax';
 
 .btn-flat:hover {
   background: rgba(0, 0, 0, 0.2);

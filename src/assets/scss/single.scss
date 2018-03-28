@@ -37,13 +37,18 @@ main.single {
   }
   div.postContent{
     p {
-      margin: 1em auto;
+      margin: 2em auto;
+      line-height: 2em;
+      font-size: 16px;
     }
     li {
       padding: 1em;
     }
     li:before {
       content: '> ';
+    }
+    img {
+      max-width: 100%;
     }
   }
 
