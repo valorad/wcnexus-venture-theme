@@ -61,6 +61,11 @@ h5 {
   font-size: 1.125rem;
 }
 
+strong {
+  font-weight: bolder;
+  padding: 0.2em;
+}
+
 .flexSpacer {
   flex-grow: 1;
 }
@@ -89,19 +94,18 @@ div.content {
   margin: 0px auto;
 }
 
+blockquote {
+  @extend .primary-border-left;
+}
+
 /* Header */
 nav.navTop {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  padding: 0px 3em;
   position: fixed;
   z-index: 10;
+  padding: 0 1em;
   @extend .primary;
   
   .btn-flat {
@@ -110,14 +114,19 @@ nav.navTop {
   a {
     text-align: center;
     text-transform: unset;
-  }
-  a.brand-logo {
-    display: flex;
-    > span {
-      font-size: 0.9em;
-      margin-left: 0.3em;
+    &.brand-logo {
+      display: flex;
+      > span {
+        font-size: 0.9em;
+        margin-left: 0.3em;
+      }
+    }
+    &.sidenav-trigger {
+      // nav mobile
+      margin: 0;
     }
   }
+  a
   i {
     float: unset;
     margin: 0px;
@@ -136,7 +145,7 @@ nav.navTop {
     display: flex;
     flex-wrap: wrap;
     .btn-flat {
-      padding: 1em;
+      padding: 0.8em 0em;
     }
     i.lang {
       line-height: 0.4em;
@@ -188,8 +197,14 @@ footer.app {
 @media only screen and (min-width: 992px) {
   /* Header */
   nav.navTop {
-    a.brand-logo {
-      position: static;
+    padding: 0px 3em;
+    a {
+      &.brand-logo {
+        position: static;
+      }
+      &.sidenav-trigger {
+        margin: 0 18px;
+      }
     }
     .icon-github {
       display: block;

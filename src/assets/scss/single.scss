@@ -1,4 +1,4 @@
-@import '../theme';
+@import './theme';
 
 /* Single */
 section.cover {
@@ -36,6 +36,7 @@ main.single {
     display: inline-block;
   }
   div.postContent{
+    word-break: break-word;
     p {
       margin: 2em auto;
       line-height: 2em;
@@ -44,9 +45,12 @@ main.single {
     li {
       padding: 1em;
     }
-    li:before {
-      content: '> ';
+    ul {
+      li:before {
+        content: '> ';
+      }
     }
+
     img {
       max-width: 100%;
     }
@@ -64,12 +68,18 @@ main.single {
       @extend .primary-text;
     }
   }
-  div.share {
+  .share {
     z-index: 1;
     position: absolute;
+    right: -2em;
+    top: 0em;
     ul {
       top: 1.8em;
     }
+  }
+
+  div.highlight .chroma {
+    overflow-x: auto;
   }
 
 }
@@ -89,6 +99,9 @@ main.single {
     }
     .card {
       background-color: rgba(255, 255, 255, 0.7);
+    }
+    .share {
+      right: 1em;
     }
   }
 }

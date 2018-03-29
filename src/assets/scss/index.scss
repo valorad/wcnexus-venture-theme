@@ -6,7 +6,7 @@
 section.cover {
   position: relative;
   .parallax {
-    min-height: 60vh;
+    min-height: 63vh;
   }
   div.venturer {
     text-align: center;
@@ -72,6 +72,10 @@ main.index {
 }
 
 @media only screen and (min-width: 992px) {
+  section.cover .parallax {
+    min-height: 50vh;
+  }
+
   main.index .cardItem {
     margin: 1em;
     max-width: 30em;

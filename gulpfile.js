@@ -168,9 +168,6 @@ gulp.task('watch', () => {
     // Watch .js files
     gulp.watch([`${clientPath}/assets/ts/**/*.ts`, `!${clientPath}/assets/ts/**/*.d.ts`], gulp.parallel('compile:ts'));
 
-    // Watch .html files
-    gulp.watch([`${clientPath}/layouts/**/*.html`], gulp.parallel('minify:html'));
-
     // Watch image files
     gulp.watch([`${clientPath}/static/images/**`], gulp.parallel('minify:images'));
 
